@@ -15,10 +15,10 @@ def get_extension(filename):
 
 
 def get_pictures(directory):
-    return list(filter(
-        lambda f: get_extension(f) in picture_extensions,
-        glob.iglob(directory + '/**/*', recursive=True)
-    ))
+    is_img = lambda f: get_extension(f) in picture_extensions
+    files = glob.iglob(directory + '/**/*', recursive=True)
+    abs_files = map(os.path.abspath, files)
+    return list(filter(is_img, abs_files))
 
 
 def get_exif(filename):
