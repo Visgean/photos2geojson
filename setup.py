@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name='photos2geojson',
-    version='0.1',
+    version='1.0',
     description="Makes geojson from EXIF data.",
     author="Visgean Skeloru",
     author_email='visgean@gmail.com',
@@ -34,5 +34,8 @@ setup(
         'console_scripts': [
             'photos2geojson = photos2geojson.main:main'
         ]
+    },
+    package_data={
+        'photos2geojson': ['*.html']
     },
 )

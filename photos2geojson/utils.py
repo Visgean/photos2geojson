@@ -79,7 +79,12 @@ def get_exif_location(exif_data):
     return lat, lon
 
 
-def parse_exif(exif_data):
+def parse_exif(filename):
+    exif_data = get_exif(filename)
+
+    if not exif_data:
+        return None
+
     lat, lon = get_exif_location(exif_data)
     date = parse_date(exif_data)
 
@@ -87,6 +92,7 @@ def parse_exif(exif_data):
         return None
 
     return {
+        'filename': filename,
         'lat': lat,
         'lon': lon,
         'date': date
@@ -100,7 +106,8 @@ def get_geojson_structure(parsed_data):
         {
             "type": "Feature",
             "properties": {
-                "date": exif_dict['date'].isoformat() if exif_dict['date'] else ''
+                "date": exif_dict['date'].isoformat() if exif_dict['date'] else '',
+                "filename": exif_dict['filename'],  
             },
 
             "geometry": {
