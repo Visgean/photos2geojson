@@ -2,8 +2,8 @@ import os
 import argparse
 import json
 
-import utils
-import simple_gist
+from photos2geojson import utils
+from photos2geojson import simple_gist
 
 def main():
     parser = argparse.ArgumentParser(description='EXIF data to gejson')
@@ -50,9 +50,6 @@ def main():
         with open(output_file, 'w') as f:
             f.write(json.dumps(geojson_struct, indent=2))
         print('Geojson written to', output_file)
-
-
-
 
 if __name__ == '__main__':
     main()
