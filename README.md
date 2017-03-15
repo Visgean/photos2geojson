@@ -12,7 +12,7 @@ $ pip3 install photos2geojson --user
 ### Usage:
 
 ```
-$ photos2geojson ~/Dropbox/ -g
+$ photos2geojson ~/Dropbox/
 ```
 
 This will create file ``map.html`` that you can view in Browser (Firefox preferably as chrome might not display image orientation correctly). 
