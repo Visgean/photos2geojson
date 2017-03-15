@@ -15,11 +15,22 @@ $ pip3 install photos2geojson --user
 $ photos2geojson ~/Dropbox/ -g
 ```
 
-you can also skip parameter -g and generate normal geojson file on your drive.
+This will create file ``map.html`` that you can view in Browser (Firefox preferably as chrome might not display image orientation correctly). 
 
-Screenshot of gist rendered geojson:
+
+Alternatively you might wish to create a Github Gist which will render the geojson:
+
+```
+$ photos2geojson ~/Dropbox/ -g
+```
+
+If you only want the geojson you can do it like this:
+
+
+```
+$ photos2geojson ~/Dropbox/ -o data.geojson
+```
+
+Screenshot of leaflet:
 
 ![screenshot](https://raw.githubusercontent.com/Visgean/photos2geojson/master/screen.png "Screenshot")
-
-
-Future idea: add local rendering file which is able to show the photos. 
