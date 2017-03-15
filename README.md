@@ -4,4 +4,4 @@ Searches recursively for photos and generates geojson map
 
 ## photos2geojson ~/Dropbox/ -g
 
-![screenshot](scren.png "Screenshot")
+![screenshot](https://raw.githubusercontent.com/Visgean/photos2geojson/master/screen.png "Screenshot")
