@@ -33,4 +33,4 @@ dist: clean
 	ls -l dist
 
 install: clean
-python setup.py install
+	python setup.py install
