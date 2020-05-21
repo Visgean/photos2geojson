@@ -50,9 +50,12 @@ def convert_to_degress(value):
     :type value: exifread.utils.Ratio
     :rtype: float
     """
-    d = float(value.values[0].num) / float(value.values[0].den)
-    m = float(value.values[1].num) / float(value.values[1].den)
-    s = float(value.values[2].num) / float(value.values[2].den)
+    try:
+        d = float(value.values[0].num) / float(value.values[0].den)
+        m = float(value.values[1].num) / float(value.values[1].den)
+        s = float(value.values[2].num) / float(value.values[2].den)
+    except (ZeroDivisionError, IndexError) as e:
+        d = m = s = 0
 
     return d + (m / 60.0) + (s / 3600.0)
     
