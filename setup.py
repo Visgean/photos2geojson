@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name='photos2geojson',
-    version='1.2',
+    version='1.3',
     description="Makes geojson from EXIF data.",
     author="Visgean Skeloru",
     author_email='visgean@gmail.com',

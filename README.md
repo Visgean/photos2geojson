@@ -1,4 +1,4 @@
-# photos2geojson | [demo](http://visgean.me/photos2geojson/)
+# Photos ➡ Geojson (Map)
 Searches recursively for photos and generates geojson map
 
 
